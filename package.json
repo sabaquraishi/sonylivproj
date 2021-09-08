@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "build": "react-scripts build && @powershell copy './build/index.html' './build/404.html'"
   },
   "eslintConfig": {
