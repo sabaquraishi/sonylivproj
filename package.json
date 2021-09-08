@@ -20,7 +20,9 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "clean": "gh-pages-clean",
+    "build": "react-scripts build && @powershell copy './build/index.html' './build/404.html'"
   },
   "eslintConfig": {
     "extends": [
