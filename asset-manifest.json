@@ -1,21 +1,26 @@
 {
   "files": {
     "main.css": "/sonylivproj/static/css/main.af840fbd.chunk.css",
-    "main.js": "/sonylivproj/static/js/main.ceb4d4b8.chunk.js",
-    "main.js.map": "/sonylivproj/static/js/main.ceb4d4b8.chunk.js.map",
+    "main.js": "/sonylivproj/static/js/main.c28d33d2.chunk.js",
+    "main.js.map": "/sonylivproj/static/js/main.c28d33d2.chunk.js.map",
     "runtime-main.js": "/sonylivproj/static/js/runtime-main.18c81ef8.js",
     "runtime-main.js.map": "/sonylivproj/static/js/runtime-main.18c81ef8.js.map",
-    "static/js/2.18bcf43e.chunk.js": "/sonylivproj/static/js/2.18bcf43e.chunk.js",
-    "static/js/2.18bcf43e.chunk.js.map": "/sonylivproj/static/js/2.18bcf43e.chunk.js.map",
+    "static/js/2.4d52566e.chunk.js": "/sonylivproj/static/js/2.4d52566e.chunk.js",
+    "static/js/2.4d52566e.chunk.js.map": "/sonylivproj/static/js/2.4d52566e.chunk.js.map",
     "index.html": "/sonylivproj/index.html",
     "static/css/main.af840fbd.chunk.css.map": "/sonylivproj/static/css/main.af840fbd.chunk.css.map",
-    "static/js/2.18bcf43e.chunk.js.LICENSE.txt": "/sonylivproj/static/js/2.18bcf43e.chunk.js.LICENSE.txt",
-    "static/media/logo.355735b3.svg": "/sonylivproj/static/media/logo.355735b3.svg"
+    "static/js/2.4d52566e.chunk.js.LICENSE.txt": "/sonylivproj/static/js/2.4d52566e.chunk.js.LICENSE.txt",
+    "static/media/Gullak.e175699f.jpeg": "/sonylivproj/static/media/Gullak.e175699f.jpeg",
+    "static/media/LOGOLIV.130519fb.png": "/sonylivproj/static/media/LOGOLIV.130519fb.png",
+    "static/media/Sony liv ad 1.c96e2277.jpeg": "/sonylivproj/static/media/Sony liv ad 1.c96e2277.jpeg",
+    "static/media/Your Honor.e294b75d.jpeg": "/sonylivproj/static/media/Your Honor.e294b75d.jpeg",
+    "static/media/chalo koi baat nahi.9297b854.jpeg": "/sonylivproj/static/media/chalo koi baat nahi.9297b854.jpeg",
+    "static/media/scam 1982.209eb1f8.jpeg": "/sonylivproj/static/media/scam 1982.209eb1f8.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.18c81ef8.js",
-    "static/js/2.18bcf43e.chunk.js",
+    "static/js/2.4d52566e.chunk.js",
     "static/css/main.af840fbd.chunk.css",
-    "static/js/main.ceb4d4b8.chunk.js"
+    "static/js/main.c28d33d2.chunk.js"
   ]
 }
