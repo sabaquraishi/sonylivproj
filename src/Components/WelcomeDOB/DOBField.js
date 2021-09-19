@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BasicTextFields() {
+export default function DOBFields() {
   const classes = useStyles();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" label="Please Enter Mobile Number" />
+      <TextField id="filled-basic" label="DD/MM/YYYY" variant="filled" />
     </form>
   );
 }
