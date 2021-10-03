@@ -9,7 +9,7 @@ export default function Experience() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Typography variant="h8"> Get ready to experience the world of entertainment </Typography>
+        <Typography variant="h6" align="left" variant="subtitle2"> Get ready to experience the world of entertainment </Typography>
       </ThemeProvider>
     </div>
   );

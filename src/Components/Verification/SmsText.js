@@ -9,7 +9,7 @@ export default function SmsText() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Typography variant="h8"> We are automatically detecting the SMS sent to +91-7840132516 </Typography>
+        <Typography variant="h12" align= "left"> We are automatically detecting the SMS sent to +91-7840132516 </Typography>
       </ThemeProvider>
     </div>
   );

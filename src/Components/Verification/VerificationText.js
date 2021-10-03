@@ -9,7 +9,7 @@ export default function VerificationText() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Typography variant="h5"> Verification </Typography>
+        <Typography variant="h4"> Verification </Typography>
       </ThemeProvider>
     </div>
   );

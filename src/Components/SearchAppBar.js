@@ -9,6 +9,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import LOGOLIV from '../Assets/LOGOLIV.png';
 import TranslateIcon from '@material-ui/icons/Translate';
+import {Link, Router} from "react-router-dom";
+import { createTheme } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -127,7 +129,9 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
+      <Link to={process.env.PUBLIC_URL + '/signin'}>
       <MenuItem onClick={handleMenuClose}>Sign In</MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>Subscribe</MenuItem>
       <MenuItem onClick={handleMenuClose}>Manage Accounts</MenuItem>
     </Menu>
@@ -205,7 +209,7 @@ export default function PrimarySearchAppBar() {
   
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             edge="start"

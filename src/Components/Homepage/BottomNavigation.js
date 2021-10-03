@@ -7,10 +7,12 @@ import HomeIcon from '@material-ui/icons/Home';
 import AddIcon from '@material-ui/icons/Add';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import Icon from '@material-ui/core/Icon'; 
 
 const useStyles = makeStyles({
   root: {
     width: 1550,
+    backgroundColor: 'black',
   },
 });
 

@@ -9,7 +9,7 @@ export default function WelcomeText() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Typography variant="h4"> Welcome ! </Typography>
+        <Typography variant="h2"> Welcome ! </Typography>
       </ThemeProvider>
     </div>
   );

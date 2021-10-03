@@ -38,20 +38,23 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 400,
     flexGrow: 1,
+    backgroundColor: 'black',
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
+    height: '80%',
+    width: '100%',
     paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: 'black',
   },
   img: {
-    height: 255,
+    height: '80%',
     display: 'block',
     maxWidth: 400,
     overflow: 'hidden',
-    width: '100%',
+    width: '90%',
+    backgroundColor: 'black',
   },
 }));
  

@@ -1,3 +1,4 @@
+import './SimpleTabs.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,6 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -43,7 +45,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: 'black',
   },
 }));
 
@@ -57,7 +59,7 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Originals" {...a11yProps(0)} />
           <Tab label="Tv Shows" {...a11yProps(1)} />

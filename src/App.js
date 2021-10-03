@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home2 from './Pages/Home2'
 import SignIn from './Pages/SignIn'
 import Verification from './Pages/Verification'
-import PrimarySearchAppBar from './Components/SearchAppBar';
-import SimpleBottomNavigation from './Components/Homepage/BottomNavigation';
 import WelcomeGender from './Pages/WelcomeGender'
 import WelcomeBday from './Pages/WelcomeBday'
 
@@ -12,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <PrimarySearchAppBar/>
       </header>
       
           <Switch>
@@ -25,7 +22,6 @@ function App() {
           </Switch>
 
       <footer className="App-footer">
-      <SimpleBottomNavigation/>
       </footer>
     </div>
   );
