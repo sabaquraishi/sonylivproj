@@ -8,9 +8,9 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
- 
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
- 
+
 const tutorialSteps = [
   {
     imgPath:
@@ -33,7 +33,7 @@ const tutorialSteps = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuUz81oycZdqQ3957PXbVDUNrE6RZW8MfdUpWfcfYdtfT5prAutfVGRQGytkJ7CAw_GM0&usqp=CAU',
   },
 ];
- 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 400,
@@ -43,39 +43,39 @@ const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: '80%',
-    width: '100%',
+    height: '90%',
+    width: '90%',
     paddingLeft: theme.spacing(4),
-    backgroundColor: 'black',
+    backgroundColor: '#121213',
   },
   img: {
-    height: '80%',
+    height: '90%',
     display: 'block',
     maxWidth: 400,
     overflow: 'hidden',
-    width: '90%',
-    backgroundColor: 'black',
+    width: '100%',
+    backgroundColor: '#121213',
   },
 }));
- 
+
 function SwipeableTextMobileStepper() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = tutorialSteps.length;
- 
+
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
- 
+
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
- 
+
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
- 
+
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
@@ -116,5 +116,5 @@ function SwipeableTextMobileStepper() {
     </div>
   );
 }
- 
+
 export default SwipeableTextMobileStepper;

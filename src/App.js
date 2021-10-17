@@ -11,20 +11,20 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      
-          <Switch>
-            <Route path={process.env.PUBLIC_URL + '/'} exact > <Home2/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/home2'} > <Home2/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/signin'}  > <SignIn/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/verification'}  > <Verification/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/welcomegender'}  > <WelcomeGender/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/welcomebday'}  > <WelcomeBday/> </Route>
-          </Switch>
+
+      <Switch>
+        <Route path={process.env.PUBLIC_URL + '/'} exact > <Home2 /> </Route>
+        <Route path={process.env.PUBLIC_URL + '/home2'} > <Home2 /> </Route>
+        <Route path={process.env.PUBLIC_URL + '/signin'}  > <SignIn /> </Route>
+        <Route path={process.env.PUBLIC_URL + '/verification'}  > <Verification /> </Route>
+        <Route path={process.env.PUBLIC_URL + '/welcomegender'}  > <WelcomeGender /> </Route>
+        <Route path={process.env.PUBLIC_URL + '/welcomebday'}  > <WelcomeBday /> </Route>
+      </Switch>
 
       <footer className="App-footer">
       </footer>
     </div>
   );
-  }
+}
 
 export default App;

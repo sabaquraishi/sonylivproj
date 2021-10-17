@@ -9,23 +9,18 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import LOGOLIV from '../Assets/LOGOLIV.png';
 import TranslateIcon from '@material-ui/icons/Translate';
-import {Link, Router} from "react-router-dom";
-import { createTheme } from '@material-ui/core/styles';
-
+import { Link, Router } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
+
   },
   menuButton: {
     marginRight: theme.spacing(2),
+
   },
-  title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
-  },
+
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -41,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
       width: 'auto',
     },
   },
+
+  AppBar: {
+    background: '#000000',
+    boxShadow: '0 0 0 0',
+  },
+
   searchIcon: {
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -49,9 +50,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'black',
   },
   inputRoot: {
-    color: 'inherit',
+    backgroundColor: 'black',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -60,18 +62,21 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     [theme.breakpoints.up('md')]: {
       width: '20ch',
+      backgroundColor: 'black',
     },
   },
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+      backgroundColor: 'black',
     },
   },
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
       display: 'none',
+      backgroundColor: 'black',
     },
   },
 }));
@@ -91,12 +96,12 @@ export default function PrimarySearchAppBar() {
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
-  
+
   const handleMenuClose = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
   };
-  
+
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
@@ -112,12 +117,12 @@ export default function PrimarySearchAppBar() {
   const handleMobileMenuClose2 = () => {
     setMobileMoreAnchorEl(null);
   };
-  
+
   const handleMenuClose2 = () => {
     setAnchorEl(null);
     handleMobileMenuClose2();
   };
-  
+
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -129,8 +134,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <Link to={process.env.PUBLIC_URL + '/signin'}>
-      <MenuItem onClick={handleMenuClose}>Sign In</MenuItem>
+      <Link to={process.env.PUBLIC_URL + '/SignIn'}>
+        <MenuItem onClick={handleMenuClose}>Sign In</MenuItem>
       </Link>
       <MenuItem onClick={handleMenuClose}>Subscribe</MenuItem>
       <MenuItem onClick={handleMenuClose}>Manage Accounts</MenuItem>
@@ -162,54 +167,55 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
- 
+
   const menuId2 = 'language-menu';
-    const renderMenu2 = (
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        id={menuId2}
-        keepMounted
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMenuOpen}
-        onClose={handleMenuClose2}
-      >
-        <MenuItem onClick={handleMenuClose2}>Hindi</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>Telugu</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>Tamil</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>English</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>Marathi</MenuItem>
-      </Menu>
-    );
-  
-    const mobileMenuId2 = 'language-menu-mobile';
-    const renderMobileMenu2 = (
-      <Menu
-        anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        id={mobileMenuId2}
-        keepMounted
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMobileMenuOpen}
-        onClose={handleMobileMenuClose2}
-      >
-        <MenuItem onClick={handleLanguageMenuOpen}>
-          <IconButton
-            aria-label="Language"
-            aria-controls="Language"
-            aria-haspopup="true"
-            color="inherit"
-          >
-            <TranslateIcon/>
-          </IconButton>
-          <p>language</p>
-        </MenuItem>
-      </Menu>
-    );
-  
+  const renderMenu2 = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={menuId2}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMenuOpen}
+      onClose={handleMenuClose2}
+    >
+      <MenuItem onClick={handleMenuClose2}>Hindi</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>Telugu</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>Tamil</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>English</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>Marathi</MenuItem>
+    </Menu>
+  );
+
+  const mobileMenuId2 = 'language-menu-mobile';
+  const renderMobileMenu2 = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={mobileMenuId2}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose2}
+    >
+      <MenuItem onClick={handleLanguageMenuOpen}>
+        <IconButton
+          aria-label="Language"
+          aria-controls="Language"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <TranslateIcon />
+        </IconButton>
+        <p>language</p>
+      </MenuItem>
+    </Menu>
+  );
+
   return (
     <div className={classes.grow}>
-      <AppBar position="fixed">
+      <AppBar position="static" className={classes.AppBar}
+      >
         <Toolbar>
           <IconButton
             edge="start"
@@ -217,11 +223,11 @@ export default function PrimarySearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <img src= {LOGOLIV} className= "LOGO" alt= "LOGO" width="80" height="80"/>
+            <img src={LOGOLIV} className="LOGO" alt="LOGO" width="80" height="80" />
           </IconButton>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-          <IconButton
+            <IconButton
               edge="end"
               aria-label="Language"
               aria-controls={menuId2}

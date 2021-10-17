@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    color: 'white',
+    // color: 'white',
     alignItems: 'center',
     '& > *': {
       margin: theme.spacing(1),
@@ -22,30 +22,30 @@ export default function GenderButtonGroup() {
 
   return (
     <div className={classes.root}>
- 
+
       <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group">
-      <Grid container spacing={11}>
-        <Grid item xs={2} lg={9}>
-        <Button>
-         <FaceIcon/>
-           Male 
-        </Button>
-        </Grid>
-        <Grid item xs={2} lg={9}>
-        <Button>
-         <FaceIcon/>
-           Female
-        </Button>
-        </Grid>
-        <Grid item xs={2} lg={9}>
-        <Button>
-        <FaceIcon/>
-           Other
-        </Button>
-        </Grid>
+        <Grid container spacing={11}>
+          <Grid item xs={2} lg={9}>
+            <Button>
+              <FaceIcon />
+              Male
+            </Button>
+          </Grid>
+          <Grid item xs={2} lg={9}>
+            <Button>
+              <FaceIcon />
+              Female
+            </Button>
+          </Grid>
+          <Grid item xs={2} lg={9}>
+            <Button>
+              <FaceIcon />
+              Other
+            </Button>
+          </Grid>
         </Grid>
       </ButtonGroup>
-      
+
     </div>
   );
 }

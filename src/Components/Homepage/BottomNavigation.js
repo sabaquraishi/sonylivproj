@@ -7,12 +7,12 @@ import HomeIcon from '@material-ui/icons/Home';
 import AddIcon from '@material-ui/icons/Add';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
-import Icon from '@material-ui/core/Icon'; 
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
     width: 1550,
-    backgroundColor: 'black',
+    color: 'white',
   },
 });
 
@@ -21,19 +21,36 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-      className={classes.root}
-    >
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Search" icon={<SearchIcon/>} />
-      <BottomNavigationAction label="Premium" icon={<AttachMoneyIcon />} />
-      <BottomNavigationAction label="My List" icon={<AddIcon />} />
-      <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
-    </BottomNavigation>
+    <Grid container spacing={1}>
+      <BottomNavigation
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        showLabels
+        className={classes.root}
+      >
+        <Grid item xs={3}>
+          <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+        </Grid>
+
+        <Grid item xs={3}>
+          <BottomNavigationAction label="Search" icon={<SearchIcon />} />
+        </Grid>
+
+        <Grid item xs={3}>
+          <BottomNavigationAction label="Premium" icon={<AttachMoneyIcon />} />
+        </Grid>
+
+        <Grid item xs={3}>
+          <BottomNavigationAction label="My List" icon={<AddIcon />} />
+        </Grid>
+
+        <Grid item xs={3}>
+          <BottomNavigationAction label="Settings" icon={<SettingsIcon />} color='white' />
+        </Grid>
+
+      </BottomNavigation>
+    </Grid>
   );
 }

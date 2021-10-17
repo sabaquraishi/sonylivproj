@@ -16,45 +16,45 @@ export default function SignIn() {
   return (
     <div className="App">
       <header className="App-header"></header>
-    <React.Fragment>
+      <React.Fragment>
         <Container fixed>
-        <Grid container spacing={11}>
-        <Grid item xs={2} lg={9}>
-        <IconButton aria-label="delete">
-        <ArrowBackIosIcon color="primary" />
-        </IconButton> 
-        </Grid>
-        <Grid item xs={2} lg={9}>
-        <img src= {LOGOLIV} className= "LOGO" alt= "LOGO" width="80" height="80"/> 
-        </Grid>
-        <Grid item xs={4} lg={9}>
-        <ItUP/>
-        </Grid>
-        <Grid item xs={6} lg={12}>
-        <Experience/>
-        </Grid>
-        </Grid>
+          <Grid container spacing={11}>
+            <Grid item xs={2} lg={9}>
+              <IconButton aria-label="delete">
+                <ArrowBackIosIcon color="primary" />
+              </IconButton>
+            </Grid>
+            <Grid item xs={2} lg={9}>
+              <img src={LOGOLIV} className="LOGO" alt="LOGO" width="80" height="80" />
+            </Grid>
+            <Grid item xs={4} lg={9}>
+              <ItUP />
+            </Grid>
+            <Grid item xs={6} lg={12}>
+              <Experience />
+            </Grid>
+          </Grid>
 
-        
-        <Grid container spacing={2}>
-        <Grid item xs={12} lg={12}>
-        <BasicTextFields/>
-        </Grid>
-        <Grid item xs={12} lg={12}>
-        <CheckboxLabels/>
-        <Grid item xs={12} lg={12}>
-        <ContainedButtons/>
-        </Grid>
-        </Grid>
-        </Grid>
 
-        <Grid item xs={12}>
-            <img src= {Ad} className= "Ad" alt= "Ad" height="80%" width="80%"/>
+          <Grid container spacing={2}>
+            <Grid item xs={12} lg={12}>
+              <BasicTextFields />
+            </Grid>
+            <Grid item xs={12} lg={12}>
+              <CheckboxLabels />
+              <Grid item xs={12} lg={12}>
+                <ContainedButtons />
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12}>
+            <img src={Ad} className="Ad" alt="Ad" height="80%" width="80%" />
           </Grid>
           <footer className="App-footer">
-      </footer>
+          </footer>
         </Container>
-    </React.Fragment>
+      </React.Fragment>
     </div>
   );
 }

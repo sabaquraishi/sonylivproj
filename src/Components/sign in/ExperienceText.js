@@ -5,9 +5,11 @@ import Typography from '@material-ui/core/Typography';
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
+
 export default function Experience() {
   return (
     <div>
+
       <ThemeProvider theme={theme}>
         <Typography variant="h6" align="left" variant="subtitle2"> Get ready to experience the world of entertainment </Typography>
       </ThemeProvider>

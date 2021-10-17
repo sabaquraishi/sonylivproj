@@ -14,31 +14,31 @@ export default function Home2() {
   return (
     <div className="App">
       <header className="App-header">
-      <Grid container spacing={12}>
-        <Grid item xs={9} lg={9}>
-      <PrimarySearchAppBar/>
-      </Grid>
-      <Grid item xs={2} lg={9}>
-      <SimpleTabs/>
-      </Grid>
-      </Grid>
+        <Grid container spacing={12}>
+          <Grid item xs={9} lg={9}>
+            <PrimarySearchAppBar />
+          </Grid>
+          <Grid item xs={2} lg={9}>
+            <SimpleTabs />
+          </Grid>
+        </Grid>
 
       </header>
 
-    <React.Fragment>
+      <React.Fragment>
         <Container>
-        <SwipeableTextMobileStepper/>
-        <ResponsiveFontSizes/>
-        <SingleLineImageList/>
-        <TrendingTrailers/>
-        <Trending/>
+          <SwipeableTextMobileStepper />
+          <ResponsiveFontSizes />
+          <SingleLineImageList />
+          <TrendingTrailers />
+          <Trending />
 
-    <footer className="App-footer">
-        <SimpleBottomNavigation />
-      </footer>
-      </Container>
-    </React.Fragment>
+          <footer className="App-footer">
+            <SimpleBottomNavigation />
+          </footer>
+        </Container>
+      </React.Fragment>
     </div>
-    
- );
+
+  );
 }

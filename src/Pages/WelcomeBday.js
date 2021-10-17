@@ -8,34 +8,34 @@ import EnterText from '../Components/WelcomeDOB/EnterText';
 import DOBText from '../Components/WelcomeDOB/DOBText';
 import DOBFields from '../Components/WelcomeDOB/DOBField';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import {Link, Router} from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 
 export default function WelcomeBday() {
-    return (
-      <React.Fragment>
-        <Container fixed>
-          <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <IconButton color= "secondary" aria-label="delete">
-          <ArrowBackIosIcon />
-          </IconButton> 
+  return (
+    <React.Fragment>
+      <Container fixed>
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <IconButton color="secondary" aria-label="delete">
+              <ArrowBackIosIcon />
+            </IconButton>
           </Grid>
           <Grid item xs={12}>
-          <img src= {LOGOLIV} className= "LOGO" alt= "LOGO" width="25%" height="80%"/>  
+            <img src={LOGOLIV} className="LOGO" alt="LOGO" width="25%" height="80%" />
           </Grid>
-          </Grid>
-          <WelcomeText/>
-          <EnterText/>
-          <DOBText/>
-          <DOBFields/>
-          <Link to={process.env.PUBLIC_URL + '/home2'}>
+        </Grid>
+        <WelcomeText />
+        <EnterText />
+        <DOBText />
+        <DOBFields />
+        <Link to={process.env.PUBLIC_URL + '/home2'}>
           <IconButton aria-label="delete">
-          <ArrowForwardIosIcon/>
+            <ArrowForwardIosIcon />
           </IconButton>
-          </Link>
+        </Link>
 
-        </Container>
-      </React.Fragment>
-    );
-  }
+      </Container>
+    </React.Fragment>
+  );
+}

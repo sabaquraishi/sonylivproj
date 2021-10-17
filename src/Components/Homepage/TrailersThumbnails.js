@@ -9,8 +9,8 @@ import Poster1 from '../../Assets/chalo koi baat nahi.jpeg';
 import Poster2 from '../../Assets/scam 1982.jpeg';
 import Poster3 from '../../Assets/Gullak.jpeg';
 import Poster4 from '../../Assets/Your Honor.jpeg';
- 
- 
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -31,29 +31,29 @@ const useStyles = makeStyles((theme) => ({
       'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
   },
 }));
- 
+
 const itemData = [
-        {
-          img: Poster1,
-          author: 'author',
-        },
-        {
-            img: Poster2,
-            author: 'author',
-          },
-          {
-            img: Poster3,
-            author: 'author',
-          },
-          {
-            img: Poster4,
-            author: 'author',
-          },
-    ];
-    
+  {
+    img: Poster1,
+    author: 'author',
+  },
+  {
+    img: Poster2,
+    author: 'author',
+  },
+  {
+    img: Poster3,
+    author: 'author',
+  },
+  {
+    img: Poster4,
+    author: 'author',
+  },
+];
+
 export default function Trending() {
   const classes = useStyles();
- 
+
   return (
     <div className={classes.root}>
       <ImageList className={classes.imageList} cols={2.5}>

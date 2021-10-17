@@ -1,4 +1,3 @@
-import './SimpleTabs.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -45,7 +44,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: 'black',
+    backgroundColor: '#121213',
   },
 }));
 

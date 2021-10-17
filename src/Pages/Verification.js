@@ -10,28 +10,28 @@ import ContinueButton from '../Components/Verification/continueButton';
 import Grid from '@material-ui/core/Grid';
 
 export default function Verification() {
-    return (
-      <React.Fragment>
-          <Container fixed>
-          <Grid container spacing={12}>
+  return (
+    <React.Fragment>
+      <Container fixed>
+        <Grid container spacing={12}>
           <Grid item xs={2} lg={6}>
-          <IconButton aria-label="delete" color= 'secondary'>
-          <ArrowBackIosIcon />
-          </IconButton> 
+            <IconButton aria-label="delete" color='secondary'>
+              <ArrowBackIosIcon />
+            </IconButton>
           </Grid>
           <Grid item xs={2} lg={6}>
-          <VerificationText/>
+            <VerificationText />
           </Grid>
-          </Grid>
-          <Grid item xs={8} lg={9}>
-          <SmsText/>
-          </Grid>
-          <Grid item xs={6} lg={9}>
-          <EnterOtpText/>
-          </Grid>
-          <OtpTextField/>
-          <ContinueButton/>
-          </Container>
-      </React.Fragment>
-    );
-  }
+        </Grid>
+        <Grid item xs={8} lg={9}>
+          <SmsText />
+        </Grid>
+        <Grid item xs={6} lg={9}>
+          <EnterOtpText />
+        </Grid>
+        <OtpTextField />
+        <ContinueButton />
+      </Container>
+    </React.Fragment>
+  );
+}
