@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
 import { Link, Router } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -9,17 +9,20 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
 }));
 
-export default function ContinueButton() {
+export default function ContinueButtons() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Link to={process.env.PUBLIC_URL + '/welcomegender'}>
-        <Button variant="contained" color="primary">
+        <Fab variant="extended">
           Continue
-        </Button>
+        </Fab>
       </Link>
     </div>
   );

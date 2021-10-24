@@ -24,12 +24,6 @@ export default function BasicTextFields() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <TextField id="yellow" label="Please Enter Mobile Number" color="yellow" backgroundColor='yellow' />
-      {/* <TextField
-      id="filled-secondary"
-      label="Filled secondary"
-      variant="filled"
-      color="green"
-    /> */}
     </form>
   );
 }

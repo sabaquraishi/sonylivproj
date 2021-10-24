@@ -9,7 +9,8 @@ import Poster1 from '../../Assets/chalo koi baat nahi.jpeg';
 import Poster2 from '../../Assets/scam 1982.jpeg';
 import Poster3 from '../../Assets/Gullak.jpeg';
 import Poster4 from '../../Assets/Your Honor.jpeg';
-
+import grey from '@material-ui/core/colors/grey';
+import BookmarkRoundedIcon from '@material-ui/icons/BookmarkRounded';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,12 +20,21 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     backgroundColor: 'black',
   },
+
   imageList: {
     flexWrap: 'nowrap',
     transform: 'translateZ(0)',
+    width: 800,
+    height: 180,
+
   },
+
   title: {
-    color: theme.palette.primary.light,
+    width: 40,
+    height: 40,
+    position: 'absolute',
+    bottom: '550%',
+    left: '-55%',
   },
   titleBar: {
     background:
@@ -67,9 +77,10 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
+                <IconButton aria-label={`bookmark ${item.title}`}>
+                  <BookmarkRoundedIcon className={classes.title} style={{ color: grey[900] }} />
                 </IconButton>
+
               }
             />
           </ImageListItem>

@@ -10,6 +10,7 @@ import Experience from '../Components/sign in/ExperienceText';
 import CheckboxLabels from '../Components/sign in/checkbox';
 import Ad from '../Assets/Sony liv ad 1.jpeg';
 import Grid from '@material-ui/core/Grid';
+import TypographyAlign from '../Components/sign in/TypeAlign';
 
 
 export default function SignIn() {
@@ -17,43 +18,40 @@ export default function SignIn() {
     <div className="App">
       <header className="App-header"></header>
       <React.Fragment>
-        <Container fixed>
-          <Grid container spacing={11}>
-            <Grid item xs={2} lg={9}>
-              <IconButton aria-label="delete">
-                <ArrowBackIosIcon color="primary" />
-              </IconButton>
-            </Grid>
-            <Grid item xs={2} lg={9}>
-              <img src={LOGOLIV} className="LOGO" alt="LOGO" width="80" height="80" />
-            </Grid>
-            <Grid item xs={4} lg={9}>
-              <ItUP />
-            </Grid>
-            <Grid item xs={6} lg={12}>
-              <Experience />
-            </Grid>
+        <TypographyAlign />
+        <Grid container spacing={4}
+          justifyContent="flex-start"
+          alignItems="center"
+        >
+          <Grid item xs={1} sm={1} md={1}>
+            <IconButton aria-label="delete">
+              <ArrowBackIosIcon color="primary" />
+            </IconButton>
+          </Grid>
+          <Grid item xs={2} sm={12} md={1}>
+            <img src={LOGOLIV} className="LOGO" alt="LOGO" width="80" height="80" />
+          </Grid>
+          <Grid item xs={5} sm={12} md={2}>
+            <ItUP />
+          </Grid>
+          <Grid item xs={10} sm={10} md={10}>
+            <Experience />
           </Grid>
 
+          <Grid container spacing={12}
+            direction="column"
+            justifyContent="centre"
+            alignItems="center"
 
-          <Grid container spacing={2}>
-            <Grid item xs={12} lg={12}>
-              <BasicTextFields />
-            </Grid>
-            <Grid item xs={12} lg={12}>
-              <CheckboxLabels />
-              <Grid item xs={12} lg={12}>
-                <ContainedButtons />
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid item xs={12}>
+            Grid item xs={12} sm={12} md={12}>
+            <BasicTextFields />
+            <CheckboxLabels />
+            <ContainedButtons />
             <img src={Ad} className="Ad" alt="Ad" height="80%" width="80%" />
+            <footer className="App-footer">
+            </footer>
           </Grid>
-          <footer className="App-footer">
-          </footer>
-        </Container>
+        </Grid>
       </React.Fragment>
     </div>
   );

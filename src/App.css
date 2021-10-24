@@ -1,50 +1,26 @@
 .App {
-  text-align: center;
-  background-color: #000000;
+  text-align: left;
+    background-color: #19191A;
 }
 
-.App-logo {
+.App-icons {
   height: 10vmin;
+  color: gold;
+
 }
 
 .App-header {
-  background-color: #000000 !important;
-  color: white;
+  background-color: #121213;
+  
 }
 
 .App-footer {
-  background-color: #282c34;
-  color: white;
+  background-color: #121213;
+  /* color:black; */
+  color: gold;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
 }
-
-/* .h1 {
-  color: white;
-}
-
-.h2 {
-  color: white;
-}
-
-.h3 {
-  color: white;
-}
-
-.h4 {
-  color: white;
-}
-
-.h5 {
-  color: white;
-}
-
-.h6 {
-  color: white;
-}
-
-
- */

@@ -10,32 +10,44 @@ import DOBFields from '../Components/WelcomeDOB/DOBField';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { Link, Router } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
+import TypographyAlign from '../Components/sign in/TypeAlign';
 
 export default function WelcomeBday() {
   return (
     <React.Fragment>
-      <Container fixed>
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
-            <IconButton color="secondary" aria-label="delete">
-              <ArrowBackIosIcon />
-            </IconButton>
-          </Grid>
-          <Grid item xs={12}>
-            <img src={LOGOLIV} className="LOGO" alt="LOGO" width="25%" height="80%" />
-          </Grid>
+      <TypographyAlign />
+      <Grid container spacing={2}
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <Grid item xs={12} sm={1} md={1}>
+          <IconButton color="secondary" aria-label="delete">
+            <ArrowBackIosIcon />
+          </IconButton>
         </Grid>
+      </Grid>
+      <Grid container spacing={12}
+        direction="column"
+        justifyContent="centre"
+        alignItems="center"
+        Grid item xs={12} sm={12} md={12}>
+        <img src={LOGOLIV} className="LOGO" alt="LOGO" width="80" height="100" />
         <WelcomeText />
         <EnterText />
+      </Grid>
+      <Grid container spacing={12}
+        direction="column"
+        justifyContent="centre"
+        alignItems="center"
+        Grid item xs={12} sm={12} md={12}>
         <DOBText />
         <DOBFields />
         <Link to={process.env.PUBLIC_URL + '/home2'}>
-          <IconButton aria-label="delete">
+          <IconButton aria-label="delete" color='secondary'>
             <ArrowForwardIosIcon />
           </IconButton>
         </Link>
-
-      </Container>
+      </Grid>
     </React.Fragment>
   );
 }

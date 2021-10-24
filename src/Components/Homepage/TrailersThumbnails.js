@@ -4,11 +4,12 @@ import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
 import Poster1 from '../../Assets/chalo koi baat nahi.jpeg';
 import Poster2 from '../../Assets/scam 1982.jpeg';
 import Poster3 from '../../Assets/Gullak.jpeg';
 import Poster4 from '../../Assets/Your Honor.jpeg';
+import BookmarkRoundedIcon from '@material-ui/icons/BookmarkRounded';
+import grey from '@material-ui/core/colors/grey';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +25,11 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateZ(0)',
   },
   title: {
-    color: theme.palette.primary.light,
+    width: 40,
+    height: 40,
+    position: 'absolute',
+    bottom: '550%',
+    left: '-55%',
   },
   titleBar: {
     background:
@@ -67,8 +72,8 @@ export default function Trending() {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
+                <IconButton aria-label={`bookmark ${item.title}`}>
+                  <BookmarkRoundedIcon className={classes.title} style={{ color: grey[900] }} />
                 </IconButton>
               }
             />

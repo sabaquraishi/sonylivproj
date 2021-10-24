@@ -8,30 +8,41 @@ import EnterOtpText from '../Components/Verification/EnterOtpText';
 import OtpTextField from '../Components/Verification/OtpField';
 import ContinueButton from '../Components/Verification/continueButton';
 import Grid from '@material-ui/core/Grid';
+import TypographyAlign from '../Components/sign in/TypeAlign';
+import { Link, Router } from "react-router-dom";
 
 export default function Verification() {
   return (
     <React.Fragment>
-      <Container fixed>
-        <Grid container spacing={12}>
-          <Grid item xs={2} lg={6}>
+      <TypographyAlign />
+      <Grid container spacing={1}
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <Grid item xs={1} sm={1} md={1}>
+          <Link to={process.env.PUBLIC_URL + '/signin'}>
             <IconButton aria-label="delete" color='secondary'>
               <ArrowBackIosIcon />
             </IconButton>
-          </Grid>
-          <Grid item xs={2} lg={6}>
-            <VerificationText />
-          </Grid>
+          </Link>
         </Grid>
-        <Grid item xs={8} lg={9}>
+        <Grid item xs={1} sm={1} md={1}>
+          <VerificationText />
+        </Grid>
+        <Grid item xs={11} sm={12} md={12}>
           <SmsText />
         </Grid>
-        <Grid item xs={6} lg={9}>
+        <Grid container spacing={12}
+          direction="column"
+          justifyContent="centre"
+          alignItems="center"
+
+          Grid item xs={12} sm={12} md={12}>
           <EnterOtpText />
+          <OtpTextField />
+          <ContinueButton />
         </Grid>
-        <OtpTextField />
-        <ContinueButton />
-      </Container>
+      </Grid>
     </React.Fragment>
   );
 }
